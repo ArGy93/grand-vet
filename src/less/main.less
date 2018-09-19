@@ -1,0 +1,220 @@
+// Bootstrap изменения
+
+@media (min-width:1200px) {
+	.container {
+		max-width:1170px
+	}
+}
+
+// Основные стили
+
+html,
+body {
+  height: 100%;
+}
+body {
+	display: flex;
+  flex-direction: column;
+	background: url(../img/main-background.png) repeat;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+.wrapper {
+	flex-grow: 1;
+}
+.services, .unique, .equipment, .reviews, .partners {
+	position: relative;
+	user-select: none;
+	font-size: 18px;
+	color: #ffffff;
+	
+	header {
+		padding-top: 35px;
+		padding-bottom: 70px;
+
+		.footprint {
+			position: relative;
+			width: 72px;
+			height: 35px;
+			margin: 0 auto 20px;
+			text-align: center;
+
+			.footprint-img {
+				width: 30px;
+				height: 25px;
+				margin: 0 auto;
+				color: #ffffff;
+				background: url(../img/icons/footprint-white.svg) no-repeat;
+				
+				&:before {
+					content: url(../img/icons/footprint-white.svg);
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					width: 20px;
+					height: 15px;
+				}
+				&:after {
+					content: url(../img/icons/footprint-white.svg);
+					position: absolute;
+					right: 0;
+					bottom: 0;
+					width: 20px;
+					height: 15px;
+				}
+			}
+		}
+		h2 {
+			font-family: 'Raleway-Bold', sans-serif;
+			margin: 0;
+			font-size: 36px;
+			font-weight: bold;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		p {
+			font-family: 'Raleway-Regular', sans-serif;
+			text-align: center;
+		}
+	}
+}
+.unique, .reviews {
+	
+	header {
+
+		.footprint {
+
+			.footprint-img {
+				background: url(../img/icons/footprint.svg) no-repeat;
+				
+				&:before {
+					content: url(../img/icons/footprint.svg);
+				}
+				&:after {
+					content: url(../img/icons/footprint.svg);
+				}
+			}
+		}
+	}
+}
+
+// Стили для слайдера
+
+// .reviews {
+// 	.slick-active:not(.slick-current) {
+// 		position: relative;
+// 		// border-left: 1px solid #000000;
+// 		&:after {
+// 			content: '';
+// 			position: absolute;
+// 			top: 0;
+// 			bottom: 0;
+// 			left: 0;
+// 			width: 2px;
+// 			background-color: #000;
+// 		}
+// 	}
+// }
+.slick-prev, .slick-next {
+	position: absolute;
+	top: 50%;
+	width: 50px;
+	height: 50px;
+	border: 2px solid #42AFE1;
+	border-radius: 100%;
+	transform: translateY(-50%);
+	transition: all 0.5s ease;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		width: 15px;
+		height: 15px;
+		transform: translateY(-50%) rotate(45deg);
+		transition: all 0.5s ease;
+	}
+	&:hover {
+		border: 2px solid #000000;
+	}
+}
+.slick-prev {
+	left: -50px;
+
+	&:before {
+		left: 40%;
+		border-left: 2px solid #42AFE1;
+		border-bottom: 2px solid #42AFE1;
+	}
+	&:hover {
+
+		&:before {
+			border-left: 2px solid #000000;
+			border-bottom: 2px solid #000000;
+		}
+	}
+}
+.slick-next {
+	right: -50px;
+
+	&:before {
+		right: 40%;
+		border-right: 2px solid #42AFE1;
+		border-top: 2px solid #42AFE1;
+	}
+	&:hover {
+
+		&:before {
+			border-right: 2px solid #000000;
+			border-top: 2px solid #000000;
+		}
+	}
+}
+.services {
+
+	.slick-prev, .slick-next {
+		width: 60px;
+		height: 60px;
+		border: 2px solid #ffffff;
+
+		&:before {
+			width: 20px;
+			height: 20px;
+		}
+		&:hover {
+			border: 3px solid #F7AA40;
+		}
+	}
+	.slick-prev {
+		left: -70px;
+
+		&:before {
+			border-left: 2px solid #ffffff;
+			border-bottom: 2px solid #ffffff;
+		}
+		&:hover {
+
+			&:before {
+				border-left: 3px solid #F7AA40;
+				border-bottom: 3px solid #F7AA40;
+			}
+		}
+	}
+	.slick-next {
+		right: -70px;
+
+		&:before {
+			border-right: 2px solid #ffffff;
+			border-top: 2px solid #ffffff;
+		}
+		&:hover {
+
+			&:before {
+				border-right: 3px solid #F7AA40;
+				border-top: 3px solid #F7AA40;
+			}
+		}
+	}
+}
