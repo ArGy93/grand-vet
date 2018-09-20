@@ -1,5 +1,5 @@
 {
-  "name": "abz-test.dev",
+  "name": "grand-vet",
   "version": "1.0.0",
   "description": "Test project",
   "main": "index.js",
@@ -13,9 +13,9 @@
   "author": "Alexander Gazovskiy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AlexPrm93/abz-test.dev/issues"
+    "url": "https://github.com/AlexPrm93/grand-vet/issues"
   },
-  "homepage": "https://github.com/AlexPrm93/abz-test.dev#readme",
+  "homepage": "https://github.com/AlexPrm93/grand-vet#readme",
   "devDependencies": {
     "browser-sync": "^2.24.5",
     "del": "^3.0.0",

@@ -1,8 +1,21 @@
 // Обрезка текста
 
 $(function() {
-    $('.service-text').succinct();
-    $('.reviews-slide>p').succinct();
+
+  // function borderLeft () {
+  //   var reviewSlide = $('.reviews-slide');
+  //   console.log(reviewSlide);
+  //   if (    reviewSlide.hasClass('slick-active') &&
+  //        !( reviewSlide.hasClass('slick-current') ) 
+  //      ) {
+  //           reviewSlide.addClass('border-left');
+  //      }
+  //  };
+  //  borderLeft();
+  
+
+    // $('.service-text').succinct();
+    // $('.reviews-slide>p').succinct();
 });
 
 // Настройки слайдеров
