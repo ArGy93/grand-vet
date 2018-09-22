@@ -288,10 +288,14 @@
 }
 @media (max-width: 768px) {
 	.main-header {
+		position: static;
+		background-color: #6FBDE3;
 
 		.container {
+			padding: 0;
 			
 			.logo {
+				z-index: 1;
 				left: 0;
 				width: 60px;
 				height: 50px;
@@ -303,39 +307,56 @@
 				height: auto;
 				margin-left: 60px;
 				
-				.mobile {
-					width: 20px;
-					height: 20px;
-					background: url(../img/icons/telephone.svg) no-repeat;
-					background-size: cover;
-				}
-				.contacts-info {
+				.mobile-phone, .mobile-menu {
 					position: relative;
-					flex-direction: column;
-					order: 3;
-					top: 100%;
-					left: 0;
-					right: 0;
-					margin-bottom: 10px;
-					padding: 0 20px;
-					border: 2px solid #F9AC41;
-					border-radius: 5px;
-					font-size: 10px;
-					background-color: transparent;
+					z-index: 100;
+					width: 35px;
+					height: 35px;
+					background-color: #6FBDE3;
+					transition: all 0.4s ease;
 					
+					&.active, &:hover {
+						background-color: #F9AC41;
+					}
 					&:after {
 						content: '';
 						position: absolute;
-						z-index: 1;
-						top: -6px;
-						left: 10px;
-						width: 10px;
-						height: 10px;
-						border-top: 2px solid #F9AC41;
-						border-left: 2px solid #F9AC41;
-						background-color: transparent;
-						opacity: 1;
-						transform: rotate(45deg);
+						top: 50%;
+						left: 50%;
+						width: 17px;
+						height: 17px;
+						transform: translate(-50%, -50%);
+					}					
+				}
+				.mobile-phone {
+
+					&:after {
+						background: url(../img/icons/telephone.svg) no-repeat;
+						background-size: cover;
+					}
+				}
+				.mobile-menu {
+
+					&:after {
+						background: url(../img/icons/menu.svg) no-repeat;
+						background-size: cover;
+					}
+				}
+				.contacts-info {				
+					flex-direction: column;
+					position: absolute;
+					z-index: 10;
+					order: 3;
+					top: -100%;
+					left: 0;
+					width: 200px;				
+					font-size: 10px;
+					border-radius: 0;
+					background-color: rgba(0, 0, 0, 0.7);
+					transition: all 0.7s ease-in-out;
+					
+					&.active {
+						top: 100%;
 					}
 					.contact {
 						display: block;
@@ -357,13 +378,17 @@
 					}				
 				}
 				.contacts-daily {
-					align-self: flex-start;
+					justify-content: center;
+					position: relative;
+					z-index: 100;
 					margin-top: 0;
+					padding-top: 5px;
 					width: auto;
-					height: auto;
+					height: 35px;
+					background-color: #6FBDE3;
 
 					.daily-text {
-						height: 20px;
+						height: 30px;
 						line-height: 20px;
 					  font-size: 12px;
 					}
@@ -374,15 +399,29 @@
 				}						
 			}
 			.main-navigation {
-				display: none;
-
+				position: absolute;
+				top: -600%;
+				right: 0;
+				z-index: 10;				
+				margin-top: 0;
+				background-color: rgba(0, 0, 0, 0.7);
+				transition: all 1s ease-in-out;
+				
+				&.active {
+					top: 100%;				
+				}
 				ul {
+					flex-direction: column;
 					justify-content: center;
 
 					li {
-						padding: 10px 5px 10px 25px;
+						padding: 8px 5px 8px 25px;
+						border-top: 1px solid #F9AC41;
 						font-size: 10px;
-
+						
+						&:first-child {
+							border-top: 1px solid transparent;
+						}
 						&.active {
 
 							&:before {
@@ -513,4 +552,15 @@
 			width: 360px;
 		}
 	}
+}
+
+
+@keyframes slidein {
+	from {
+    position: relative;
+  }
+  
+  to {
+   position: absolute;
+ }
 }

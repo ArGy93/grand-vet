@@ -2,16 +2,16 @@
 
 $(function() {
 
-  // function borderLeft () {
-  //   var reviewSlide = $('.reviews-slide');
-  //   console.log(reviewSlide);
-  //   if (    reviewSlide.hasClass('slick-active') &&
-  //        !( reviewSlide.hasClass('slick-current') ) 
-  //      ) {
-  //           reviewSlide.addClass('border-left');
-  //      }
-  //  };
-  //  borderLeft();
+  $('.mobile-phone').click(function () {
+    $(this).toggleClass('active');
+    $('.contacts-info').toggleClass('active');
+  });
+
+  $('.mobile-menu').click(function () {
+    $(this).toggleClass('active');
+    $('.main-navigation').toggleClass('active');
+  });
+
   
 
     // $('.service-text').succinct();
@@ -57,6 +57,7 @@ $('.services-slider').slick({
     {
       breakpoint: 768,
       settings: {
+        arrows: false,
         slidesToShow: 1
       }
     }
