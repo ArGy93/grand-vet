@@ -55,7 +55,13 @@ $('.services-slider').slick({
       }
     },
     {
-      breakpoint: 768,
+      breakpoint: 770,
+      settings: {
+        slidesToShow: 1
+      }
+    },
+    {
+      breakpoint: 450,
       settings: {
         arrows: false,
         slidesToShow: 1
@@ -125,7 +131,7 @@ $('.partners-slider').slick({
       }
     },
     {
-      breakpoint: 768,
+      breakpoint: 770,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1
