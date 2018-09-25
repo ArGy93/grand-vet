@@ -1,13 +1,19 @@
 @media (max-width: 1400px) {
 	.services {
 		
-		.services-content {
-			width: 960px;
+		.services-block {
 
-			.services-info {
-				height: 175px;
-				padding: 0 15px;
-			}
+			.slider-block {
+				max-width: 960px;
+
+				.services-slider {
+					margin: 0 -35px;
+				}
+			}		
+		}
+		.services-info {
+			width: 960px;
+			height: 175px;
 		}
 	}
 	.services {
@@ -23,7 +29,13 @@
 		}
 	}
 	.reviews {
-
+		
+		.reviews-block {
+		
+			.reviews-content {
+				max-width: 960px;
+			}
+		}
 		.ferret {
 			display: none;
 		}
@@ -93,45 +105,52 @@
 	.services {
 		font-size: 14px;
 		
-		.services-content {
-			width: 720px;
-			
-			.services-slider {
-				position: relative;
-				height: 200px;
-				margin: 0 -15px;
+		.services-block {
 
-				.slide-box {
+			.slider-block {
+				max-width: 720px;
+				
+				.services-slider {
+					position: relative;
+					height: 190px;
+					margin: 0 -35px;
 
-					.slide {
-						width: 200px;
-						height: 200px;
+					.slide-box {
 
-						img {
-							&.height {
-								height: 100%;
+						.slide {
+							width: 190px;
+							height: 190px;
+
+							img {
+								&.height {
+									height: 100%;
+								}
+								&.width {
+									width: 100%;
+								}
+							}						
+							span {
+								height: 35px;
+								width: 190px;
 							}
-							&.width {
-								width: 100%;
-							}
-						}						
-						span {
-							height: 35px;
-							width: 200px;
 						}
 					}
-				}
+				}				
 			}
-			.services-info {
-				height: 155px;
-				padding: 0 10px;
-			}
+		}
+		.services-info {
+			width: 720px;
+			height: 115px;
+			padding: 10px 0;
 		}
 	}
 	.reviews {
-
-		.reviews-content {
-			width: 960px;
+		
+		.reviews-block {
+		
+			.reviews-content {
+				max-width: 720px;
+			}
 		}
 	}
 	.partners {
@@ -214,58 +233,52 @@
 	}
 	.services {
 		font-size: 13px;
-		
-		.services-content {
-			width: 540px;
-			
-			.services-slider {
-				position: relative;
-				height: 200px;
-				margin: 0 -15px;
 
-				.slide-box {
+		.services-block {
 
-					.slide {
-						width: 200px;
-						height: 200px;
+			.slider-block {
+				max-width: 540px;
+				
+				.services-slider {
+					margin: 0 -53px;
+					height: 215px;
 
-						img {
-							&.height {
-								height: 100%;
+					.slide-box {
+
+						.slide {
+							width: 215px;
+							height: 215px;
+					
+							span {
+								width: 215px;
 							}
-							&.width {
-								width: 100%;
-							}
-						}						
-						span {
-							height: 35px;
-							width: 200px;
 						}
-					}
+					}			
 				}
 			}
-			.services-info {
-				height: 135px;
-				padding: 0 25px;
+		}
+		.services-info {
+			width: 540px;
+			height: 115px;
+			padding: 0 25px;
 
-				.container {
+			.service-description {
+				padding: 10px 0;
+				
+				.service-header, .service-text {
+					margin: 0;
 					padding: 10px 0;
-
-					.service-description {
-						padding: 0 10px;
-						
-						.service-header, .service-text {
-							margin: 8px 0;
-						}
-					}
 				}
 			}
 		}
 	}
 	.reviews {
-
-		.reviews-content {
-			width: 720px;
+		
+		.reviews-block {
+		
+			.reviews-content {
+				max-width: 540px;
+			}
 		}
 	}
 	.partners {
@@ -292,6 +305,7 @@
 		background-color: #6FBDE3;
 
 		.container {
+			max-width: 100%;
 			padding: 0;
 			
 			.logo {
@@ -457,39 +471,36 @@
 	.services {
 		font-size: 16px;
 		
-		.services-content {
-			width: 270px;
-			
-			.services-slider {
-				position: relative;
-				height: 265px;
-				margin: 0 -15px;
+		.services-block {
 
-				.slide-box {
+			.slider-block {
+				max-width: 270px;
+				
+				.services-slider {
+					position: relative;
+					height: 265px;
+					margin: 0 -15px;
 
-					.slide {
-						width: 270px;
-						height: 265px;
+					.slide-box {
 
-						img {
-							&.height {
-								height: 100%;
-							}
-							&.width {
-								width: 100%;
-							}
-						}						
-						span {
-							height: 45px;
+						.slide {
 							width: 270px;
+							height: 265px;
+							margin: 0 15px;
+					
+							span {
+								height: 45px;
+								width: 270px;
+							}
 						}
 					}
-				}
-			}			
-			.services-info {
-				height: auto;
-				padding: 0;
+				}			
 			}
+		}
+		.services-info {
+			width: 270px;
+			height: auto;
+			padding: 0 10px;
 		}
 	}
 	.equipment {
@@ -501,9 +512,19 @@
 		}
 	}
 	.reviews {
+		
+		.reviews-block {
+		
+			.reviews-content {
+				max-width: 360px;
 
-		.reviews-content {
-			width: 540px;
+				.reviews-slide {
+					
+					&:after {
+						width: 0;
+					}
+				}
+			}
 		}
 	}
 	.partners {
@@ -521,6 +542,17 @@
 	}
 }
 @media (max-width: 576px) {
+	.services, .unique, .equipment, .reviews, .partners {
+
+		header {
+			padding-top: 25px;
+			padding-bottom: 35px;
+
+			h2 {
+				font-size: 25px;
+			}
+		}
+	}
 	.main-section {
 		max-height: 200px;
 
@@ -540,16 +572,27 @@
 			}
 		}
 	}
+	.services {
+		
+		.services-block {
+			.arrow-block-1, .arrow-block-2 {
+				display: none;
+			}
+		}
+	}
 	.reviews {
-
-		.reviews-content {
-			width: 360px;
+		
+		.reviews-block {
+		
+			.arrow-block-1, .arrow-block-2 {
+				display: none;
+			}
 		}
 	}
 	.partners {
 
 		.partners-slider {
-			width: 360px;
+			width: 270px;
 		}
 	}
 }

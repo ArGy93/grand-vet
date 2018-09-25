@@ -1,8 +1,8 @@
 // Bootstrap изменения
 
-@media (min-width:1200px) {
+@media (min-width: 1200px) {
 	.container {
-		max-width:1170px
+		max-width: 1170px;
 	}
 }
 
@@ -100,9 +100,82 @@ ul {
 	}
 }
 
-// Стили для слайдера
+// Блоки для стрелок
 
-.slick-prev, .slick-next {
+.arrow-block-1, .arrow-block-2 {
+	position: relative;
+	width: 50px;
+}
+.arrow-block-2 {
+	order: 3;
+}
+.services {
+
+	.arrow-block-1, .arrow-block-2 {
+		width: 85px;
+	}
+}
+
+// Стрелки для слайдера в блоке "Услуги Гранд-Вет"
+.services-prev-arrow, .services-next-arrow {
+	position: absolute;
+	top: 50%;
+	width: 60px;
+	height: 60px;
+	border: 2px solid #ffffff;
+	border-radius: 100%;
+	transform: translateY(-50%);
+	transition: all 0.5s ease;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		width: 20px;
+		height: 20px;
+		transform: translateY(-50%) rotate(45deg);
+		transition: all 0.5s ease;
+	}
+	&:hover {
+		border: 3px solid #F7AA40;
+	}
+}
+.services-prev-arrow {
+	left: 0;
+
+	&:before {
+		left: 40%;
+		border-left: 2px solid #ffffff;
+		border-bottom: 2px solid #ffffff;
+	}
+	&:hover {
+
+		&:before {
+			border-left: 3px solid #F7AA40;
+			border-bottom: 3px solid #F7AA40;
+		}
+	}
+}
+.services-next-arrow {
+	right: 0;
+
+	&:before {
+		right: 40%;
+		border-right: 2px solid #ffffff;
+		border-top: 2px solid #ffffff;
+	}
+	&:hover {
+
+		&:before {
+			border-right: 3px solid #F7AA40;
+			border-top: 3px solid #F7AA40;
+		}
+	}
+}
+
+// Стрелки для слайдера в блоке "Отзывы клиентов"
+
+.prev-arrow, .next-arrow {
 	position: absolute;
 	top: 50%;
 	width: 50px;
@@ -125,8 +198,8 @@ ul {
 		border: 2px solid #000000;
 	}
 }
-.slick-prev {
-	left: -50px;
+.prev-arrow {
+	left: 0;
 
 	&:before {
 		left: 40%;
@@ -141,8 +214,8 @@ ul {
 		}
 	}
 }
-.slick-next {
-	right: -50px;
+.next-arrow {
+	right: 0;
 
 	&:before {
 		right: 40%;
@@ -157,52 +230,24 @@ ul {
 		}
 	}
 }
-.services {
 
-	.slick-prev, .slick-next {
-		width: 60px;
-		height: 60px;
-		border: 2px solid #ffffff;
+// Для полос в слайдере блока "Отзывы"
 
-		&:before {
-			width: 20px;
-			height: 20px;
-		}
-		&:hover {
-			border: 3px solid #F7AA40;
-		}
-	}
-	.slick-prev {
-		left: -70px;
+.reviews-content {
 
-		&:before {
-			border-left: 2px solid #ffffff;
-			border-bottom: 2px solid #ffffff;
-		}
-		&:hover {
-
-			&:before {
-				border-left: 3px solid #F7AA40;
-				border-bottom: 3px solid #F7AA40;
-			}
-		}
-	}
-	.slick-next {
-		right: -70px;
-
-		&:before {
-			border-right: 2px solid #ffffff;
-			border-top: 2px solid #ffffff;
-		}
-		&:hover {
-
-			&:before {
-				border-right: 3px solid #F7AA40;
-				border-top: 3px solid #F7AA40;
-			}
-		}
+	.slick-list {
+		right: -2px;
 	}
 }
+
+
+
+
+
+
+
+
+
 // .reviews {
 	
 // 	.slick-active {
@@ -220,6 +265,3 @@ ul {
 // 	}
 // }
 
-.border-left {
-	border-left: 1px solid #000000;
-}

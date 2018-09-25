@@ -3,96 +3,101 @@
 	padding-bottom: 155px;
 	color: #000000;
 	background-color: #9BCFE7;
-
-	.reviews-content {
-		width: 1170px;
-		padding: 0 15px;
-		margin: 0 auto;
-
-		.reviews-slide {
-			position: relative;
-			font-family: 'Raleway-Regular', sans-serif;
-			box-sizing: border-box;
-			padding: 15px;
-			text-align: center;
-			
-			&:after {
-				content: '';
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				left: -2px;
-				width: 2px;
-				background-color: #000;
-			}
-			.quotes {
-				display: block;
-				height: 60px;
-				padding-bottom: 20px;
-				font-size: 80px;
-				font-weight: bold;
-			}
-			.name {
-				font-family: 'Raleway-Medium', sans-serif;
-				display: block;
-				font-size: 14px;
-				text-transform: uppercase;
-			}
-			.pet {
-				display: block;
-				font-size: 14px;
-			}
-			p {
-				overflow: hidden;
-				display: flex;
-				align-items: center;
-				font-size: 15px;
-				padding: 0 15px;
-				height: 100px;
-			}
-			&>a {
+	
+	.reviews-block {
+		display: flex;
+		justify-content: center;
+	
+		.reviews-content {
+			overflow: hidden;
+			flex-grow: 1;
+			order: 2;
+			max-width: 1170px;
+			margin: 0 15px;
+				
+			.reviews-slide {
 				position: relative;
-				font-size: 15px;
-				color: #2980B0;
+				font-family: 'Raleway-Regular', sans-serif;
+				box-sizing: border-box;
+				padding: 15px;
+				text-align: center;
 				
 				&:after {
-					content: url(../img/icons/next.svg);
+					content: '';
 					position: absolute;
-					top: 50%;
-					right: -30px;
-					width: 13px;
-					height: 10px;
-					transform: translateY(-50%);
+					top: 0;
+					bottom: 0;
+					left: -2px;
+					width: 2px;
+					background-color: #000;
 				}
-			}
-			.social {
-				width: 110px;
-				height: 50px;
-				margin: 25px auto 5px;
-
-				.fb, .inst {
+				.quotes {
 					display: block;
-					float: left;
-					width: 50px;
-					height: 50px;
+					height: 60px;
+					padding-bottom: 20px;
+					font-size: 80px;
+					font-weight: bold;
 				}
-				.fb {
-					margin-right: 10px;
-					background: url(../img/icons/facebook-blue.svg);
-					background-size: cover;
-
-					&:hover {
-						background: url(../img/icons/facebook-orange.svg);
-						background-size: cover;
+				.name {
+					font-family: 'Raleway-Medium', sans-serif;
+					display: block;
+					font-size: 14px;
+					text-transform: uppercase;
+				}
+				.pet {
+					display: block;
+					font-size: 14px;
+				}
+				p {
+					overflow: hidden;
+					font-size: 15px;
+					padding: 0 15px;
+					height: 100px;
+				}
+				&>a {
+					position: relative;
+					font-size: 15px;
+					color: #2980B0;
+					
+					&:after {
+						content: url(../img/icons/next.svg);
+						position: absolute;
+						top: 50%;
+						right: -30px;
+						width: 13px;
+						height: 10px;
+						transform: translateY(-50%);
 					}
 				}
-				.inst {
-					background: url(../img/icons/instagram-blue.svg);
-					background-size: cover;
+				.social {
+					width: 110px;
+					height: 50px;
+					margin: 25px auto 5px;
 
-					&:hover {
-						background: url(../img/icons/instagram-orange.svg);
+					.fb, .inst {
+						display: block;
+						float: left;
+						width: 50px;
+						height: 50px;
+					}
+					.fb {
+						margin-right: 10px;
+						background: url(../img/icons/facebook-blue.svg);
 						background-size: cover;
+
+						&:hover {
+							background: url(../img/icons/facebook-orange.svg);
+							background-size: cover;
+						}
+					}
+					.inst {
+						background: url(../img/icons/instagram-blue.svg);
+						background-size: cover;
+
+						&:hover {
+							background: url(../img/icons/instagram-orange.svg);
+							background-size: cover;
+						}
 					}
 				}
 			}

@@ -2,6 +2,8 @@
 
 $(function() {
 
+// Выпадающие меню в мобильной версии хедера
+
   $('.mobile-phone').click(function () {
     $(this).toggleClass('active');
     $('.contacts-info').toggleClass('active');
@@ -10,6 +12,23 @@ $(function() {
   $('.mobile-menu').click(function () {
     $(this).toggleClass('active');
     $('.main-navigation').toggleClass('active');
+  });
+
+// Переключение страниц в меню хедера
+
+  $('.main-navigation li').click(function () {
+    $('.main-navigation li').removeClass('active');
+    $(this).addClass('active');
+  });
+
+// Переключение текста в блоке "Услуги Гранд-Вет"
+
+  $('.slide-box').click(function () {
+    var slide = $(this).attr('data-target');
+    $('.slide-box').removeClass('active');
+    $(this).addClass('active');
+    $('.service-description').removeClass('active');
+    $('.service-description' + slide).addClass('active');
   });
 
   
@@ -34,12 +53,14 @@ $('.main-slider').slick({
 });
 
 $('.services-slider').slick({
-  autoplay: false,
+  autoplay: true,
   autoplaySpeed: 5000,
   speed: 1000,
   infinite: true,
   slidesToShow: 4,
   slidesToScroll: 1,
+  prevArrow: '.services-prev-arrow',
+  nextArrow: '.services-next-arrow',
   touchMove: false,
   responsive: [
     {
@@ -61,7 +82,7 @@ $('.services-slider').slick({
       }
     },
     {
-      breakpoint: 450,
+      breakpoint: 580,
       settings: {
         arrows: false,
         slidesToShow: 1
@@ -77,12 +98,13 @@ $('.reviews-content').slick({
   infinite: true,
   slidesToShow: 3,
   slidesToScroll: 3,
+  prevArrow: '.prev-arrow',
+  nextArrow: '.next-arrow',
   touchMove: false,
   responsive: [
     {
       breakpoint: 1300,
       settings: {
-      	arrows: false,
         slidesToShow: 3,
   			slidesToScroll: 1
       }
@@ -90,7 +112,6 @@ $('.reviews-content').slick({
     {
       breakpoint: 1200,
       settings: {
-      	arrows: false,
         slidesToShow: 2,
         slidesToScroll: 1
       }
@@ -98,7 +119,21 @@ $('.reviews-content').slick({
     {
       breakpoint: 992,
       settings: {
-      	arrows: false,
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 770,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 580,
+      settings: {
+        arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1
       }
@@ -144,22 +179,6 @@ $('.partners-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1
       }
-      // settings: "unslick"
     }
   ]
-});
-
-// Скрипты
-
-$('.main-navigation li').click(function () {
-  $('.main-navigation li').removeClass('active');
-  $(this).addClass('active');
-});
-
-$('.slide-box').click(function () {
-  var slide = $(this).attr('data-target');
-  $('.slide-box').removeClass('active');
-  $(this).addClass('active');
-  $('.service-description').removeClass('active');
-  $('.service-description' + slide).addClass('active');
 });
