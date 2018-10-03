@@ -143,6 +143,67 @@ ul {
 .services .arrow-block-2 {
   width: 85px;
 }
+.main-prev-arrow,
+.main-next-arrow {
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #ffffff;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.main-prev-arrow:before,
+.main-next-arrow:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+      -ms-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.main-prev-arrow:hover,
+.main-next-arrow:hover {
+  border: 3px solid #F7AA40;
+}
+.main-prev-arrow {
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.main-prev-arrow:before {
+  left: 40%;
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+.main-prev-arrow:hover:before {
+  border-left: 3px solid #F7AA40;
+  border-bottom: 3px solid #F7AA40;
+}
+.main-next-arrow {
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+      -ms-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+.main-next-arrow:before {
+  right: 40%;
+  border-right: 2px solid #ffffff;
+  border-top: 2px solid #ffffff;
+}
+.main-next-arrow:hover:before {
+  border-right: 3px solid #F7AA40;
+  border-top: 3px solid #F7AA40;
+}
 .services-prev-arrow,
 .services-next-arrow {
   position: absolute;
@@ -483,6 +544,25 @@ ul {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.main-section .arrow-block {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  background-color: transparent;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.main-section .arrow-block.left {
+  left: 0;
+}
+.main-section .arrow-block.right {
+  right: 0;
+}
+.main-section .arrow-block:hover {
+  background: rgba(0, 0, 0, 0.5);
 }
 .services {
   margin-bottom: 70px;

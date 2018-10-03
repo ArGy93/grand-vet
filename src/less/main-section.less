@@ -57,4 +57,22 @@
 			// min-height: 695px;
 		}
 	}
+	.arrow-block {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 100px;
+		background-color: transparent;
+		transition: all 0.5s ease;
+
+		&.left {
+			left: 0;
+		}
+		&.right {
+			right: 0;
+		}
+		&:hover {
+			background: rgba(0, 0, 0, 0.5);
+		}
+	}
 }

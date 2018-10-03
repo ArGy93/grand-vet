@@ -116,6 +116,64 @@ ul {
 	}
 }
 
+// Стрелки для главного слайдера
+.main-prev-arrow, .main-next-arrow {
+	position: absolute;
+	top: 50%;
+	width: 60px;
+	height: 60px;
+	border: 2px solid #ffffff;
+	border-radius: 100%;
+	transition: all 0.5s ease;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		width: 20px;
+		height: 20px;
+		transform: translateY(-50%) rotate(45deg);
+		transition: all 0.5s ease;
+	}
+	&:hover {
+		border: 3px solid #F7AA40;
+	}
+}
+.main-prev-arrow {
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	&:before {
+		left: 40%;
+		border-left: 2px solid #ffffff;
+		border-bottom: 2px solid #ffffff;
+	}
+	&:hover {
+
+		&:before {
+			border-left: 3px solid #F7AA40;
+			border-bottom: 3px solid #F7AA40;
+		}
+	}
+}
+.main-next-arrow {
+	right: 50%;
+	transform: translate(50%, -50%);
+
+	&:before {
+		right: 40%;
+		border-right: 2px solid #ffffff;
+		border-top: 2px solid #ffffff;
+	}
+	&:hover {
+
+		&:before {
+			border-right: 3px solid #F7AA40;
+			border-top: 3px solid #F7AA40;
+		}
+	}
+}
+
 // Стрелки для слайдера в блоке "Услуги Гранд-Вет"
 .services-prev-arrow, .services-next-arrow {
 	position: absolute;
@@ -239,3 +297,14 @@ ul {
 		right: -2px;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
