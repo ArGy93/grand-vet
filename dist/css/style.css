@@ -531,6 +531,7 @@ ul {
   width: 100%;
 }
 .main-section .main-slider .image-box {
+  outline: none;
   overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
@@ -595,6 +596,7 @@ ul {
   margin: 0 -15px;
 }
 .services .services-block .slider-block .services-slider .slide-box {
+  outline: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -861,6 +863,7 @@ ul {
   margin: 0 15px;
 }
 .reviews .reviews-block .reviews-content .reviews-slide {
+  outline: none;
   position: relative;
   font-family: 'Raleway-Regular', sans-serif;
   -webkit-box-sizing: border-box;
@@ -961,6 +964,9 @@ ul {
 .partners .partners-slider {
   width: 1170px;
   margin: 0 auto;
+}
+.partners .partners-slider .partner-slide {
+  outline: none;
 }
 .partners .partners-slider .partner-slide img {
   margin: 0 auto;
