@@ -150,7 +150,7 @@ gulp.task('prod', ['clean', 'add-libs', 'img', 'less', 'css-min', 'scripts-min']
 	var prodJs = gulp.src('src/js/**/*')
 							.pipe(gulp.dest('dist/js/'));
 
-	var prodHtml = gulp.src('src/*.html')
+	var prodHtml = gulp.src('src/**/*.html')
 								.pipe(gulp.dest('dist/'))
 
 });
