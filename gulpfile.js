@@ -52,15 +52,16 @@ gulp.task('add-libs', function () {
 
 // For compilation less-file to css-file
 gulp.task('less', function () {
-	return gulp.src(['src/less/main.less', 
-									'src/less/header.less', 
-									'src/less/main-section.less', 
-									'src/less/services-section.less', 
-									'src/less/unique-section.less', 
-									'src/less/equipment-section.less', 
-									'src/less/reviews-section.less', 
-									'src/less/partners-section.less', 
-									'src/less/footer.less', 
+	return gulp.src(['src/less/main-page/main.less', 
+									'src/less/main-page/header.less', 
+									'src/less/main-page/main-section.less', 
+									'src/less/main-page/services-section.less', 
+									'src/less/main-page/unique-section.less', 
+									'src/less/main-page/equipment-section.less', 
+									'src/less/main-page/reviews-section.less', 
+									'src/less/main-page/partners-section.less', 
+									'src/less/main-page/footer.less', 
+									'src/less/contacts-page/contacts-page.less',
 									'src/less/media.less'])
 				.pipe(concat('style.less'))
 				.pipe(less())
