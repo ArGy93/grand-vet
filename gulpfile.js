@@ -52,7 +52,7 @@ gulp.task('add-libs', function () {
 
 // For compilation less-file to css-file
 gulp.task('less', function () {
-	return gulp.src(['src/less/main-page/main.less', 
+	return gulp.src(['src/less/main.less', 
 									'src/less/main-page/header.less', 
 									'src/less/main-page/main-section.less', 
 									'src/less/main-page/services-section.less', 
@@ -62,6 +62,8 @@ gulp.task('less', function () {
 									'src/less/main-page/partners-section.less', 
 									'src/less/main-page/footer.less', 
 									'src/less/contacts-page/contacts-page.less',
+									'src/less/services-page/services-page.less',
+									'src/less/animation.less',
 									'src/less/media.less'])
 				.pipe(concat('style.less'))
 				.pipe(less())

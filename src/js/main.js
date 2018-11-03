@@ -14,14 +14,14 @@ $(function() {
 
 // Переключение страниц в меню хедера
 
-  $('.main-navigation li').click(function () {
+  $('.main-navigation li').click( function() {
     $('.main-navigation li').removeClass('active');
     $(this).addClass('active');
   });
 
 // Переключение текста в блоке "Услуги Гранд-Вет"
 
-  $('.slide-box').click(function () {
+  $('.slide-box').click( function() {
     var slide = $(this).attr('data-target');
     $('.slide-box').removeClass('active');
     $(this).addClass('active');
@@ -174,5 +174,68 @@ $(function() {
       }
     ]
   });
+
+  // Скрипты для Services.page
+
+  // Добавление и удаление стилей при ресайзе или для экранов телефонов и планшетов
+
+  $(window).resize( function() {
+
+    var windowWidth = $(window).width();
+
+
+    if ( windowWidth <= 768 ) {
+      $('.diagnostic, .surgery').addClass('responsive').removeClass('active');
+      $('.diagnostic ul, .surgery ul').hide();
+    }
+    else {
+      $('.diagnostic, .surgery').removeClass('responsive');
+      $('.diagnostic ul, .surgery ul').show();
+    }
+
+    if ( windowWidth <= 576 ) {
+      $('.therapy').addClass('responsive').removeClass('active');
+      $('.therapy ul').hide();
+    }
+    else {
+      $('.therapy').removeClass('responsive');
+      $('.therapy ul').show();
+    }
+
+  }).trigger('resize');
+
+  // Выпадающие меню для телефонов и планшетов
+
+  function listToggle( target ) {
+    var lists = $('.responsive');
+
+    for ( var i = 0; i < lists.length; i++ ) {
+      if ( $(lists[i]).is(target) ) {
+        $(lists[i]).toggleClass('active').find('ul').slideToggle();
+      }
+      else {
+        $(lists[i]).removeClass('active').find('ul').slideUp();
+      }
+    }
+  }
+
+  function responsiveWidth( obj ) {
+    if ( obj.hasClass('responsive') ) {
+      listToggle( obj );
+    }
+  }
+
+  $('.diagnostic').click( function() {
+    responsiveWidth( $(this) );
+  });
+
+  $('.surgery').click( function() {
+    responsiveWidth( $(this) );
+  });
+
+  $('.therapy').click( function() {
+    responsiveWidth( $(this) );
+  });
+
 
 });

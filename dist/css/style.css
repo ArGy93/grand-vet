@@ -29,6 +29,14 @@ ul {
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
+.mr-top-30 {
+  margin-top: 30px;
+}
+@media (max-width: 1200px) {
+  .h-100 {
+    height: 100%;
+  }
+}
 .services,
 .unique,
 .equipment,
@@ -127,6 +135,39 @@ ul {
 .unique header .footprint .footprint-img:after,
 .reviews header .footprint .footprint-img:after {
   content: url(../img/icons/footprint.svg);
+}
+.services-page .services {
+  margin: 0;
+  color: #000000;
+}
+.services-page .services > .heading {
+  padding-top: 45px;
+  padding-bottom: 55px;
+  text-align: center;
+}
+.services-page .services > .heading h1 {
+  position: relative;
+  display: inline;
+  font-family: 'Raleway-Bold', sans-serif;
+  margin: 0;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+.services-page .services > .heading h1:before {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  width: 26px;
+  height: 21px;
+  background: url(../../img/icons/footprint.svg);
+  -webkit-background-size: cover;
+          background-size: cover;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .arrow-block-1,
 .arrow-block-2 {
@@ -322,6 +363,72 @@ ul {
 }
 .reviews-content .slick-list {
   right: -2px;
+}
+.main-section.contacts-page,
+.main-section.services-page {
+  height: 350px;
+}
+.main-section.contacts-page .main-img,
+.main-section.services-page .main-img {
+  width: 100%;
+  height: 100%;
+}
+.main-section.contacts-page .main-container,
+.main-section.services-page .main-container {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.main-section.contacts-page .main-container .main-info,
+.main-section.services-page .main-container .main-info {
+  margin-bottom: 70px;
+  font-family: 'Raleway-Bold', sans-serif;
+  font-size: 36px;
+  text-transform: none;
+}
+.main-section.contacts-page .main-container .main-info p,
+.main-section.services-page .main-container .main-info p {
+  margin: 20px 0;
+}
+.main-section.contacts-page .main-container .main-info span,
+.main-section.services-page .main-container .main-info span {
+  font-family: 'Raleway-Bold', sans-serif;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0;
+}
+.main-section.contacts-page .main-container .main-info .breadcrumbs,
+.main-section.services-page .main-container .main-info .breadcrumbs {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.main-section.contacts-page .main-container .main-info .breadcrumbs a,
+.main-section.services-page .main-container .main-info .breadcrumbs a {
+  cursor: default;
+  display: inline-block;
+}
+.main-section.contacts-page .main-container .main-info .breadcrumbs a:link,
+.main-section.services-page .main-container .main-info .breadcrumbs a:link,
+.main-section.contacts-page .main-container .main-info .breadcrumbs a:visited,
+.main-section.services-page .main-container .main-info .breadcrumbs a:visited,
+.main-section.contacts-page .main-container .main-info .breadcrumbs a:active,
+.main-section.services-page .main-container .main-info .breadcrumbs a:active,
+.main-section.contacts-page .main-container .main-info .breadcrumbs a:hover,
+.main-section.services-page .main-container .main-info .breadcrumbs a:hover {
+  text-decoration: none;
+  color: #000000;
+}
+.main-section.contacts-page .main-container .main-info .breadcrumbs a:hover:not(.active),
+.main-section.services-page .main-container .main-info .breadcrumbs a:hover:not(.active) {
+  cursor: pointer;
+  color: #3099CA;
+}
+.main-section.contacts-page .main-container .main-info .breadcrumbs a.active span,
+.main-section.services-page .main-container .main-info .breadcrumbs a.active span {
+  font-family: 'Raleway-SemiBold', sans-serif;
+  font-weight: normal;
 }
 .main-header {
   position: absolute;
@@ -1131,58 +1238,6 @@ ul {
   font-weight: bold;
   color: #ffffff;
 }
-.main-section.contacts-page {
-  height: 350px;
-}
-.main-section.contacts-page .main-img {
-  width: 100%;
-  height: 100%;
-}
-.main-section.contacts-page .main-container {
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-.main-section.contacts-page .main-container .main-info {
-  margin-bottom: 70px;
-  font-family: 'Raleway-Bold', sans-serif;
-  font-size: 36px;
-  text-transform: none;
-}
-.main-section.contacts-page .main-container .main-info p {
-  margin: 20px 0;
-}
-.main-section.contacts-page .main-container .main-info span {
-  font-family: 'Raleway-Bold', sans-serif;
-  display: inline-block;
-  font-weight: bold;
-  padding: 0;
-}
-.main-section.contacts-page .main-container .main-info .breadcrumbs {
-  margin-left: 10px;
-  font-size: 14px;
-  font-weight: bold;
-}
-.main-section.contacts-page .main-container .main-info .breadcrumbs a {
-  cursor: default;
-  display: inline-block;
-}
-.main-section.contacts-page .main-container .main-info .breadcrumbs a:link,
-.main-section.contacts-page .main-container .main-info .breadcrumbs a:visited,
-.main-section.contacts-page .main-container .main-info .breadcrumbs a:active,
-.main-section.contacts-page .main-container .main-info .breadcrumbs a:hover {
-  text-decoration: none;
-  color: #000000;
-}
-.main-section.contacts-page .main-container .main-info .breadcrumbs a:hover:not(.active) {
-  cursor: pointer;
-  color: #3099CA;
-}
-.main-section.contacts-page .main-container .main-info .breadcrumbs a.active span {
-  font-family: 'Raleway-SemiBold', sans-serif;
-  font-weight: normal;
-}
 .contacts-variable {
   background-color: #FFFFFF;
 }
@@ -1270,6 +1325,468 @@ ul {
   margin: 30px 0;
   -webkit-border-radius: 10px;
           border-radius: 10px;
+}
+.services-page .services .therapy,
+.services-page .services .diagnostic,
+.services-page .services .surgery {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  background-color: #F0F4F5;
+}
+.services-page .services .therapy > .heading,
+.services-page .services .diagnostic > .heading,
+.services-page .services .surgery > .heading {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 75px;
+  padding: 0 30px;
+  background-color: #A1D771;
+}
+.services-page .services .therapy > .heading img,
+.services-page .services .diagnostic > .heading img,
+.services-page .services .surgery > .heading img {
+  width: 45px;
+  height: 49px;
+}
+.services-page .services .therapy > .heading h2,
+.services-page .services .diagnostic > .heading h2,
+.services-page .services .surgery > .heading h2 {
+  font-family: Raleway-Bold;
+  padding-left: 25px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.services-page .services .therapy ul,
+.services-page .services .diagnostic ul,
+.services-page .services .surgery ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 45px 0;
+  padding: 0;
+  list-style: none;
+}
+.services-page .services .therapy ul li,
+.services-page .services .diagnostic ul li,
+.services-page .services .surgery ul li {
+  padding: 13px 25px;
+  font-family: Raleway-Bold;
+  font-size: 16px;
+}
+.services-page .services .therapy ul li:hover,
+.services-page .services .diagnostic ul li:hover,
+.services-page .services .surgery ul li:hover {
+  background-color: #FFFFFF;
+}
+.services-page .services .therapy ul li span,
+.services-page .services .diagnostic ul li span,
+.services-page .services .surgery ul li span {
+  font-family: Raleway-Medium;
+}
+.services-page .services .feature-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+.services-page .services .feature-box .feature {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 75px;
+  margin: 6px 0;
+  background-color: #A1D771;
+}
+.services-page .services .feature-box .feature:first-child {
+  margin-top: 0;
+}
+.services-page .services .feature-box .feature:last-child {
+  margin-bottom: 0;
+}
+.services-page .services .feature-box .feature .img-box {
+  min-width: 70px;
+  max-width: 70px;
+  margin-left: 10px;
+}
+.services-page .services .feature-box .feature .img-box img {
+  display: block;
+  margin: 0 auto;
+}
+.services-page .services .feature-box .feature > p {
+  font-family: Raleway-Bold;
+  padding-left: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.services-page .services .feature-box .feature > p span {
+  font-family: Raleway-Medium;
+  text-transform: none;
+}
+.services-page .services .services-images {
+  cursor: pointer;
+  width: 100%;
+}
+.services-page .services-news {
+  margin-top: 95px;
+  padding: 35px 0;
+  background-color: #9CD0E8;
+}
+.services-page .services-news .img-box {
+  position: relative;
+  width: 265px;
+  height: 265px;
+  margin: 20px auto;
+  -webkit-border-radius: 40px;
+          border-radius: 40px;
+}
+.services-page .services-news .img-box .news-number {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+  background-color: #6FBEE5;
+}
+.services-page .services-news .img-box .news-number span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: Raleway-Bold;
+  font-size: 38px;
+  color: #FFFFFF;
+  -webkit-transform: translate(-50%, -55%);
+      -ms-transform: translate(-50%, -55%);
+          transform: translate(-50%, -55%);
+}
+.services-page .services-news .img-box img {
+  width: 100%;
+  height: 100%;
+}
+.services-page .services-news .news-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+.services-page .services-news .news-box .heading {
+  margin-bottom: 20px;
+}
+.services-page .services-news .news-box .heading h3,
+.services-page .services-news .news-box .heading p {
+  display: inline;
+  margin: 0;
+  font-family: Raleway-Bold;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.services-page .services-news .news-box .heading p {
+  color: #FA5114;
+}
+.services-page .services-news .news-box > p {
+  font-family: Raleway-Medium;
+  font-size: 18px;
+}
+.services-page .services-news .news-box > p span {
+  font-weight: bold;
+}
+@-webkit-keyframes waveArrowTop {
+  0% {
+    top: 10%;
+    opacity: 0;
+    -webkit-transform: translateY(-50%) rotate(45deg) scale(1);
+            transform: translateY(-50%) rotate(45deg) scale(1);
+  }
+  50% {
+    top: 42%;
+    opacity: 1;
+    -webkit-transform: translateY(-50%) rotate(45deg) scale(1.2);
+            transform: translateY(-50%) rotate(45deg) scale(1.2);
+  }
+  100% {
+    top: 70%;
+    opacity: 0;
+    -webkit-transform: translateY(-50%) rotate(45deg) scale(1);
+            transform: translateY(-50%) rotate(45deg) scale(1);
+  }
+}
+@keyframes waveArrowTop {
+  0% {
+    top: 10%;
+    opacity: 0;
+    -webkit-transform: translateY(-50%) rotate(45deg) scale(1);
+            transform: translateY(-50%) rotate(45deg) scale(1);
+  }
+  50% {
+    top: 42%;
+    opacity: 1;
+    -webkit-transform: translateY(-50%) rotate(45deg) scale(1.2);
+            transform: translateY(-50%) rotate(45deg) scale(1.2);
+  }
+  100% {
+    top: 70%;
+    opacity: 0;
+    -webkit-transform: translateY(-50%) rotate(45deg) scale(1);
+            transform: translateY(-50%) rotate(45deg) scale(1);
+  }
+}
+@-webkit-keyframes waveArrowCenter {
+  0% {
+    top: 42%;
+    opacity: 1;
+    -webkit-transform: translateY(-50%) rotate(45deg) scale(1.2);
+            transform: translateY(-50%) rotate(45deg) scale(1.2);
+  }
+  50% {
+    top: 70%;
+    opacity: 0;
+    -webkit-transform: translateY(-50%) rotate(45deg) scale(1);
+            transform: translateY(-50%) rotate(45deg) scale(1);
+  }
+  100% {
+    top: 10%;
+    opacity: 0;
+    -webkit-transform: translateY(-50%) rotate(45deg) scale(1);
+            transform: translateY(-50%) rotate(45deg) scale(1);
+  }
+}
+@keyframes waveArrowCenter {
+  0% {
+    top: 42%;
+    opacity: 1;
+    -webkit-transform: translateY(-50%) rotate(45deg) scale(1.2);
+            transform: translateY(-50%) rotate(45deg) scale(1.2);
+  }
+  50% {
+    top: 70%;
+    opacity: 0;
+    -webkit-transform: translateY(-50%) rotate(45deg) scale(1);
+            transform: translateY(-50%) rotate(45deg) scale(1);
+  }
+  100% {
+    top: 10%;
+    opacity: 0;
+    -webkit-transform: translateY(-50%) rotate(45deg) scale(1);
+            transform: translateY(-50%) rotate(45deg) scale(1);
+  }
+}
+@-webkit-keyframes waveArrowBottom {
+  0% {
+    top: 70%;
+    opacity: 0;
+    -webkit-transform: translateY(-50%) rotate(45deg) scale(1);
+            transform: translateY(-50%) rotate(45deg) scale(1);
+  }
+  50% {
+    top: 10%;
+    opacity: 0;
+    -webkit-transform: translateY(-50%) rotate(45deg) scale(1);
+            transform: translateY(-50%) rotate(45deg) scale(1);
+  }
+  100% {
+    top: 42%;
+    opacity: 1;
+    -webkit-transform: translateY(-50%) rotate(45deg) scale(1.2);
+            transform: translateY(-50%) rotate(45deg) scale(1.2);
+  }
+}
+@keyframes waveArrowBottom {
+  0% {
+    top: 70%;
+    opacity: 0;
+    -webkit-transform: translateY(-50%) rotate(45deg) scale(1);
+            transform: translateY(-50%) rotate(45deg) scale(1);
+  }
+  50% {
+    top: 10%;
+    opacity: 0;
+    -webkit-transform: translateY(-50%) rotate(45deg) scale(1);
+            transform: translateY(-50%) rotate(45deg) scale(1);
+  }
+  100% {
+    top: 42%;
+    opacity: 1;
+    -webkit-transform: translateY(-50%) rotate(45deg) scale(1.2);
+            transform: translateY(-50%) rotate(45deg) scale(1.2);
+  }
+}
+@-webkit-keyframes waveArrowTopReverse {
+  0% {
+    top: 30%;
+    opacity: 0;
+    -webkit-transform: translateY(-50%) rotate(-135deg) scale(1);
+            transform: translateY(-50%) rotate(-135deg) scale(1);
+  }
+  50% {
+    top: 90%;
+    opacity: 0;
+    -webkit-transform: translateY(-50%) rotate(-135deg) scale(1.2);
+            transform: translateY(-50%) rotate(-135deg) scale(1.2);
+  }
+  100% {
+    top: 60%;
+    opacity: 1;
+    -webkit-transform: translateY(-50%) rotate(-135deg) scale(1);
+            transform: translateY(-50%) rotate(-135deg) scale(1);
+  }
+}
+@keyframes waveArrowTopReverse {
+  0% {
+    top: 30%;
+    opacity: 0;
+    -webkit-transform: translateY(-50%) rotate(-135deg) scale(1);
+            transform: translateY(-50%) rotate(-135deg) scale(1);
+  }
+  50% {
+    top: 90%;
+    opacity: 0;
+    -webkit-transform: translateY(-50%) rotate(-135deg) scale(1.2);
+            transform: translateY(-50%) rotate(-135deg) scale(1.2);
+  }
+  100% {
+    top: 60%;
+    opacity: 1;
+    -webkit-transform: translateY(-50%) rotate(-135deg) scale(1);
+            transform: translateY(-50%) rotate(-135deg) scale(1);
+  }
+}
+@-webkit-keyframes waveArrowCenterReverse {
+  0% {
+    top: 60%;
+    opacity: 1;
+    -webkit-transform: translateY(-50%) rotate(-135deg) scale(1.2);
+            transform: translateY(-50%) rotate(-135deg) scale(1.2);
+  }
+  50% {
+    top: 30%;
+    opacity: 0;
+    -webkit-transform: translateY(-50%) rotate(-135deg) scale(1);
+            transform: translateY(-50%) rotate(-135deg) scale(1);
+  }
+  100% {
+    top: 90%;
+    opacity: 0;
+    -webkit-transform: translateY(-50%) rotate(-135deg) scale(1);
+            transform: translateY(-50%) rotate(-135deg) scale(1);
+  }
+}
+@keyframes waveArrowCenterReverse {
+  0% {
+    top: 60%;
+    opacity: 1;
+    -webkit-transform: translateY(-50%) rotate(-135deg) scale(1.2);
+            transform: translateY(-50%) rotate(-135deg) scale(1.2);
+  }
+  50% {
+    top: 30%;
+    opacity: 0;
+    -webkit-transform: translateY(-50%) rotate(-135deg) scale(1);
+            transform: translateY(-50%) rotate(-135deg) scale(1);
+  }
+  100% {
+    top: 90%;
+    opacity: 0;
+    -webkit-transform: translateY(-50%) rotate(-135deg) scale(1);
+            transform: translateY(-50%) rotate(-135deg) scale(1);
+  }
+}
+@-webkit-keyframes waveArrowBottomReverse {
+  0% {
+    top: 90%;
+    opacity: 0;
+    -webkit-transform: translateY(-50%) rotate(-135deg) scale(1);
+            transform: translateY(-50%) rotate(-135deg) scale(1);
+  }
+  50% {
+    top: 60%;
+    opacity: 1;
+    -webkit-transform: translateY(-50%) rotate(-135deg) scale(1);
+            transform: translateY(-50%) rotate(-135deg) scale(1);
+  }
+  100% {
+    top: 30%;
+    opacity: 1;
+    -webkit-transform: translateY(-50%) rotate(-135deg) scale(1.2);
+            transform: translateY(-50%) rotate(-135deg) scale(1.2);
+  }
+}
+@keyframes waveArrowBottomReverse {
+  0% {
+    top: 90%;
+    opacity: 0;
+    -webkit-transform: translateY(-50%) rotate(-135deg) scale(1);
+            transform: translateY(-50%) rotate(-135deg) scale(1);
+  }
+  50% {
+    top: 60%;
+    opacity: 1;
+    -webkit-transform: translateY(-50%) rotate(-135deg) scale(1);
+            transform: translateY(-50%) rotate(-135deg) scale(1);
+  }
+  100% {
+    top: 30%;
+    opacity: 1;
+    -webkit-transform: translateY(-50%) rotate(-135deg) scale(1.2);
+            transform: translateY(-50%) rotate(-135deg) scale(1.2);
+  }
 }
 @media (max-width: 1400px) {
   .services .services-block .slider-block {
@@ -1396,6 +1913,47 @@ ul {
   .partners .partners-slider {
     width: 960px;
   }
+  .services-page .services .feature-box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+  }
+  .services-page .services .feature-box .feature {
+    width: -webkit-calc(50% - 15px);
+    width: calc(50% - 15px);
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  .services-page .services .feature-box .feature:first-child {
+    margin-top: 12px;
+  }
+  .services-page .services .feature-box .feature:last-child {
+    margin-bottom: 12px;
+  }
+  .services-page .services .feature-box .feature:nth-child(2) {
+    margin-top: 12px;
+  }
+  .services-page .services .feature-box .feature:nth-child(even) {
+    margin-left: 15px;
+  }
+  .services-page .services .feature-box .feature:nth-child(odd) {
+    margin-right: 15px;
+  }
+  .services-page .services .services-images {
+    display: none;
+  }
 }
 @media (max-width: 992px) {
   .main-header .container .logo {
@@ -1493,6 +2051,113 @@ ul {
   .main-footer .links {
     min-height: 0;
     padding-bottom: 15px;
+  }
+  .services-page .services .therapy > .heading,
+  .services-page .services .diagnostic > .heading,
+  .services-page .services .surgery > .heading {
+    height: 55px;
+    padding: 0 15px;
+  }
+  .services-page .services .therapy > .heading img,
+  .services-page .services .diagnostic > .heading img,
+  .services-page .services .surgery > .heading img {
+    width: 35px;
+    height: 39px;
+  }
+  .services-page .services .therapy > .heading h2,
+  .services-page .services .diagnostic > .heading h2,
+  .services-page .services .surgery > .heading h2 {
+    font-family: Raleway-Bold;
+    padding-left: 20px;
+    font-size: 14px;
+  }
+  .services-page .services .therapy ul,
+  .services-page .services .diagnostic ul,
+  .services-page .services .surgery ul {
+    margin: 15px 0;
+  }
+  .services-page .services .therapy ul li,
+  .services-page .services .diagnostic ul li,
+  .services-page .services .surgery ul li {
+    padding: 10px 15px;
+    font-family: Raleway-Bold;
+    font-size: 12px;
+  }
+  .services-page .services .therapy ul li span,
+  .services-page .services .diagnostic ul li span,
+  .services-page .services .surgery ul li span {
+    font-family: Raleway-Medium;
+  }
+  .services-page .services .feature-box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  .services-page .services .feature-box .feature {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    min-width: 75px;
+    max-width: 75px;
+    margin: 5px !important;
+  }
+  .services-page .services .feature-box .feature:nth-child(even) {
+    margin: 0;
+  }
+  .services-page .services .feature-box .feature:nth-child(odd) {
+    margin: 0;
+  }
+  .services-page .services .feature-box .feature:first-child {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .services-page .services .feature-box .feature:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .services-page .services .feature-box .feature:hover .img-box {
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  .services-page .services .feature-box .feature .img-box {
+    min-width: 40px;
+    max-width: 40px;
+    margin: 0 auto;
+  }
+  .services-page .services .feature-box .feature .img-box img {
+    width: 100%;
+  }
+  .services-page .services .feature-box .feature > p {
+    display: none;
+    font-size: 14px;
+  }
+  .services-page .services .mr-top-30 {
+    margin-top: 0;
+  }
+  .services-page .services-news .news-box .heading h3,
+  .services-page .services-news .news-box .heading p {
+    font-size: 20px;
+  }
+  .services-page .services-news .news-box > p {
+    font-size: 15px;
   }
 }
 @media (max-width: 768px) {
@@ -1725,6 +2390,112 @@ ul {
     min-height: 0;
     padding-bottom: 15px;
   }
+  .services-page .services .h-100 {
+    height: auto;
+  }
+  .services-page .services .mr-top-10 {
+    margin-top: 10px;
+  }
+  .services-page .services .mr-bottom-10 {
+    margin-bottom: 0;
+  }
+  .services-page .services .mr-bottom-15 {
+    margin-bottom: 15px;
+  }
+  .services-page .services .diagnostic > .heading,
+  .services-page .services .surgery > .heading {
+    position: relative;
+  }
+  .services-page .services .diagnostic > .heading .arrow,
+  .services-page .services .surgery > .heading .arrow {
+    position: absolute;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    opacity: 0;
+    border-bottom: 2px solid #000000;
+    border-right: 2px solid #000000;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+        -ms-transform: translateY(-50%) rotate(45deg);
+            transform: translateY(-50%) rotate(45deg);
+  }
+  .services-page .services .diagnostic > .heading .arrow.top,
+  .services-page .services .surgery > .heading .arrow.top {
+    -webkit-animation: waveArrowTop 1s linear infinite;
+            animation: waveArrowTop 1s linear infinite;
+  }
+  .services-page .services .diagnostic > .heading .arrow.center,
+  .services-page .services .surgery > .heading .arrow.center {
+    -webkit-animation: waveArrowCenter 1s linear infinite;
+            animation: waveArrowCenter 1s linear infinite;
+  }
+  .services-page .services .diagnostic > .heading .arrow.bottom,
+  .services-page .services .surgery > .heading .arrow.bottom {
+    -webkit-animation: waveArrowBottom 1s linear infinite;
+            animation: waveArrowBottom 1s linear infinite;
+  }
+  .services-page .services .diagnostic.responsive > .heading,
+  .services-page .services .surgery.responsive > .heading {
+    cursor: pointer;
+  }
+  .services-page .services .diagnostic.active > .heading .arrow.top,
+  .services-page .services .surgery.active > .heading .arrow.top {
+    -webkit-animation: waveArrowTopReverse 1s linear infinite;
+            animation: waveArrowTopReverse 1s linear infinite;
+  }
+  .services-page .services .diagnostic.active > .heading .arrow.center,
+  .services-page .services .surgery.active > .heading .arrow.center {
+    -webkit-animation: waveArrowCenterReverse 1s linear infinite;
+            animation: waveArrowCenterReverse 1s linear infinite;
+  }
+  .services-page .services .diagnostic.active > .heading .arrow.bottom,
+  .services-page .services .surgery.active > .heading .arrow.bottom {
+    -webkit-animation: waveArrowBottomReverse 1s linear infinite;
+            animation: waveArrowBottomReverse 1s linear infinite;
+  }
+  .services-page .services .feature-box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .services-page .services .feature-box .feature {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    min-width: 100%;
+    height: 55px;
+  }
+  .services-page .services .feature-box .feature:hover .img-box {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+  .services-page .services .feature-box .feature .img-box {
+    margin: 0;
+    margin-left: 15px;
+  }
+  .services-page .services .feature-box .feature > p {
+    display: block;
+    font-size: 14px;
+  }
+  .services-page .services-news .news-box {
+    margin-bottom: 30px;
+  }
 }
 @media (max-width: 576px) {
   .services header,
@@ -1788,5 +2559,108 @@ ul {
   }
   .main-footer .location .address:before {
     content: none;
+  }
+  .services-page .services .mr-bottom-10 {
+    margin-bottom: 10px;
+  }
+  .services-page .services .therapy > .heading,
+  .services-page .services .diagnostic > .heading,
+  .services-page .services .surgery > .heading {
+    position: relative;
+  }
+  .services-page .services .therapy > .heading .arrow,
+  .services-page .services .diagnostic > .heading .arrow,
+  .services-page .services .surgery > .heading .arrow {
+    position: absolute;
+    right: 20px;
+    width: 15px;
+    height: 15px;
+    opacity: 0;
+    border-bottom: 2px solid #000000;
+    border-right: 2px solid #000000;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+        -ms-transform: translateY(-50%) rotate(45deg);
+            transform: translateY(-50%) rotate(45deg);
+  }
+  .services-page .services .therapy > .heading .arrow.top,
+  .services-page .services .diagnostic > .heading .arrow.top,
+  .services-page .services .surgery > .heading .arrow.top {
+    -webkit-animation: waveArrowTop 1s linear infinite;
+            animation: waveArrowTop 1s linear infinite;
+  }
+  .services-page .services .therapy > .heading .arrow.center,
+  .services-page .services .diagnostic > .heading .arrow.center,
+  .services-page .services .surgery > .heading .arrow.center {
+    -webkit-animation: waveArrowCenter 1s linear infinite;
+            animation: waveArrowCenter 1s linear infinite;
+  }
+  .services-page .services .therapy > .heading .arrow.bottom,
+  .services-page .services .diagnostic > .heading .arrow.bottom,
+  .services-page .services .surgery > .heading .arrow.bottom {
+    -webkit-animation: waveArrowBottom 1s linear infinite;
+            animation: waveArrowBottom 1s linear infinite;
+  }
+  .services-page .services .therapy.responsive > .heading,
+  .services-page .services .diagnostic.responsive > .heading,
+  .services-page .services .surgery.responsive > .heading {
+    cursor: pointer;
+  }
+  .services-page .services .therapy.active > .heading .arrow.top,
+  .services-page .services .diagnostic.active > .heading .arrow.top,
+  .services-page .services .surgery.active > .heading .arrow.top {
+    -webkit-animation: waveArrowTopReverse 1s linear infinite;
+            animation: waveArrowTopReverse 1s linear infinite;
+  }
+  .services-page .services .therapy.active > .heading .arrow.center,
+  .services-page .services .diagnostic.active > .heading .arrow.center,
+  .services-page .services .surgery.active > .heading .arrow.center {
+    -webkit-animation: waveArrowCenterReverse 1s linear infinite;
+            animation: waveArrowCenterReverse 1s linear infinite;
+  }
+  .services-page .services .therapy.active > .heading .arrow.bottom,
+  .services-page .services .diagnostic.active > .heading .arrow.bottom,
+  .services-page .services .surgery.active > .heading .arrow.bottom {
+    -webkit-animation: waveArrowBottomReverse 1s linear infinite;
+            animation: waveArrowBottomReverse 1s linear infinite;
+  }
+  .services-page .services .feature-box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .services-page .services .feature-box .feature {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    min-width: 100%;
+    height: 55px;
+  }
+  .services-page .services .feature-box .feature:hover .img-box {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+  .services-page .services .feature-box .feature .img-box {
+    margin: 0;
+    margin-left: 15px;
+  }
+  .services-page .services .feature-box .feature > p {
+    display: block;
+    font-size: 14px;
   }
 }
